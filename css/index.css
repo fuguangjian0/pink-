@@ -1,0 +1,245 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: -apple-system, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #666;
+} 
+* {
+  /* 点击高亮我们需要清除 设置为transparent 完成透明 */
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+/* 在移动端浏览器默认的外观在ios上加上这个属性才能给按钮和输入框自定义样式 */
+input {
+  -webkit-appearance: none;
+}
+/* 禁止长按页面时弹出菜单 */
+a,
+img {
+  -webkit-touch-callout: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  /*去除图片的缝隙*/
+  vertical-align: top;
+}
+.app {
+  height: 45px;
+  background-color: #fff;
+}
+.app ul li{
+  line-height: 45px;
+  float: left;
+  height: 45px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+
+}
+.app ul li:nth-child(1){
+  width: 8%;
+}
+.app ul li:nth-child(1) img {
+  width: 10px;
+}
+.app ul li:nth-child(2){
+  width: 10%;
+}
+.app ul li:nth-child(2) img {
+  width: 30px;
+  vertical-align: middle;
+}  
+.app ul li:nth-child(3){
+  width: 57%;
+}
+.app ul li:nth-child(4){
+  width: 25%;
+  background-color: #F63515;
+}
+
+/*搜索*/
+.search-wrap {
+  position: fixed;/*固定定位 宽度消失*/
+  /*外边距合并子盒子设置margin把父盒子带下来了, 加一个overflow: hidden;*/
+  overflow: hidden;
+  width: 100%;
+  height: 44px;
+  min-width: 320px;
+  max-width: 640px;
+}
+.search-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 44px;
+}
+.search-btn::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 18px;
+  background: url(../images/s-btn.png) no-repeat;
+  background-size: 20px 16px;
+  margin: 14px 0 0 15px;
+  /*background-color: red;*/
+}
+.search-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 44px;
+  color: #fff;
+  line-height: 44px;
+}
+.search {
+  position: relative;
+  margin: 0 50px;
+  margin-top: 7px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+.jd-icon {
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  width: 20px;
+  height: 15px;
+  background-color: pink;
+  background: url(../images/jd.png) no-repeat;
+  background-size: 20px 15px;
+}
+.jd-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -8px;
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #ccc;
+}
+.sou {
+  position: absolute;
+  top: 8px;
+  left: 50px;
+  width: 18px;
+  height: 15px;
+  background-color: pink;
+  /*先等比例所放为原来的 一半*/
+  background: url(../images/jd-sprites.png) no-repeat -83px 0;
+  background-size: 200px auto;
+}
+
+/*主体内容区*/
+.slider img {
+  width: 100%;
+}
+.brand {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+.brand div {
+  float: left;
+  width: 33.3333%;
+}
+.brand div img {
+  width: 100%;
+}
+
+/* nav部分 */
+nav a {
+  float: left;
+  padding-top: 5px;
+  width: 20%;
+  text-align: center;
+}
+nav a img {
+  width: 40px;
+  margin: 10px 0;
+}
+nav a span {
+  display: block;
+}
+
+/*新闻模块*/
+.news {
+  clear: both;
+}
+.news a{
+  float: left;
+  box-sizing: border-box;
+}
+.news img{
+  width: 100%;
+}
+.news a:nth-child(1) {
+  width: 50%;
+}
+.news a:nth-child(2) {
+  width: 25%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.news a:nth-child(3) {
+  width: 25%;
+}
+
+/*商品区*/
+.goods {
+  clear: both;
+  padding-top: 40px;
+  line-height: 40px;
+}
+.goods ul li {
+  display: block;
+  clear: both;
+  margin-bottom: 200px;
+}
+.goods_title {
+  clear: both;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: rgb(241, 156, 156);
+  background-color: rgb(143, 96, 204);
+  font-size: 18px;
+}
+.goods span {
+  width: 100%;
+  text-align: left;
+}
+.goods span .item1,
+.item2 {
+  float: left;
+  width: 50%;
+} 
+.goods span h4, 
+p {
+  margin-left: 10px;
+} 
+.goods span .item1 p,
+.item2 p {
+  color: rgb(241, 156, 156);
+}
+.goods span img {
+  float: left;
+  width: 50%;
+  height: 100px;
+}
